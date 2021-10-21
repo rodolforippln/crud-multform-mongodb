@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import * as C from './styles'
+import { ChangeEvent, useEffect } from 'react'
 
 import { useForm, FormActions } from '../../contexts/FormContext'
 import { CadastroSucesso } from '../../components/CadastroSucesso'
@@ -9,9 +10,20 @@ const Finalizar = () => {
     const router = useRouter()
     const { state, dispatch } = useForm()
 
+    useEffect(() => {
+        if(state.name === '') {
+            router.push('/');
+        } else {
+            dispatch({
+                type: FormActions.setCurrentStep,
+                payload: 2
+            });
+        }
+    }, []);
+
     return (
 
-        <CadastroSucesso>
+        
 
             <C.Container>
                 <p>Final</p>
@@ -27,7 +39,7 @@ const Finalizar = () => {
 
 
             </C.Container>
-        </CadastroSucesso>
+
 
 
     )

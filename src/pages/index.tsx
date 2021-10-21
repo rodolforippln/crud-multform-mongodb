@@ -1,15 +1,15 @@
 import type { NextPage } from 'next'
 
-import FormStep1 from './FormStep1'
+import FormStep1 from '../components/FormStep1'
 import { Theme } from '../components/Theme'
 
 const Home: NextPage = () => {
   return (
 
+    <Theme>
 
-
-        <FormStep1 /> 
- 
+      <FormStep1 />  
+      </Theme>
   )
 }
 

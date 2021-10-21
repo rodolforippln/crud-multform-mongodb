@@ -23,7 +23,7 @@ const FormStep2 = () => {
 
     const handleNextStep = () => {
         if (state.name !== '') {
-            router.push('/FormStep3')
+            router.push('/step3')
         } else {
             alert('Preencha os dados')
         }
@@ -41,8 +41,6 @@ const FormStep2 = () => {
 
 
     return (
-
-        <Theme>
 
             <C.Container>
                 <p>Passo 2/3</p>
@@ -75,8 +73,6 @@ const FormStep2 = () => {
 
                 <button onClick={handleNextStep}>Próximo</button>
             </C.Container>
-
-           </Theme> 
 
 
     )

@@ -4,7 +4,6 @@ import * as C from './styles'
 import { useForm, FormActions } from '../../contexts/FormContext'
 import { ChangeEvent, useEffect } from 'react'
 import { Theme } from '../../components/Theme'
-import Foto from '../../svgs/mail.svg'
 
 
 const FormStep1 = () => {
@@ -20,7 +19,7 @@ const FormStep1 = () => {
 
     const handleNextStep = () => {
         if (state.name !== '') {
-            router.push('/FormStep2')
+            router.push('/step2')
         } else {
             alert('Preencha os dados')
         }
@@ -36,13 +35,7 @@ const FormStep1 = () => {
 
     return (
 
-        <Theme>
-
-
-            <C.Container>
-
-
-               
+            <C.Container>               
 
                 <p>Passo 1/3</p>
                 <h1>Vamos começar com seu nome</h1>
@@ -62,7 +55,7 @@ const FormStep1 = () => {
                 <button onClick={handleNextStep}>Próximo</button>
             </C.Container>
 
-            </Theme>
+
 
 
 

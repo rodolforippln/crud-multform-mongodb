@@ -25,7 +25,7 @@ const FormStep3 = () => {
 
     const handleNextStep = () => {
         if (state.name !== '') {
-            router.push('/FormStep2')
+            router.push('/step2')
         } else {
             alert('Preencha os dados')
         }
@@ -42,7 +42,7 @@ const FormStep3 = () => {
     
             try {
                 const response = await api.post('/dados', {name, email, level, github})
-                router.push('/Finalizar')
+                router.push('/finalizar')
                 
                 
             } catch(err){
@@ -71,9 +71,6 @@ const FormStep3 = () => {
 
     return (
 
-        <Theme>
-
-
             <C.Container>
                 <p>Passo 3/3</p>
                 <h1>Legal {state.name}, onde te achamos?</h1>
@@ -100,14 +97,12 @@ const FormStep3 = () => {
                     />
                 </label>
 
-                <Link href="/FormStep2" >
+                <Link href="/step2" >
                     <a>Voltar</a>
                 </Link>
 
                 <button onClick={handleSubmidCadastro}>Próximo</button>
             </C.Container>
-
-            </Theme>
 
 
     )

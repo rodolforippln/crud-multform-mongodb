@@ -30,7 +30,7 @@ export const Theme = ({ children }: Props) => {
                             title="Profissional"
                             description="Seu nível"
                             icon="book"
-                            path="/FormStep2"
+                            path="/step2"
                             active={state.currentStep === 2}
                         />
 
@@ -38,7 +38,7 @@ export const Theme = ({ children }: Props) => {
                             title="Contatos"
                             description="Como te achar"
                             icon="mail"
-                            path="/FormStep3"
+                            path="/step3"
                             active={state.currentStep === 3}
                         />                
                         
